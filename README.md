@@ -2,9 +2,8 @@
 
 Here, we provide the pytorch implementation of the paper: Relation-Decomposition Change Enhancement Block via Supervised Contrastive Learning for Remote Sensing Change Detection.
 
-For more ore information, please see our published paper later. 
+For more information, please see our published paper later. 
 
-![image-20210228153142126](./images/pipeline.png)
 
 ## Requirements
 
@@ -30,7 +29,14 @@ We have provided some model weight files trained on the WHU-CD dataset.
 Firstly, you can download our CEBlock pretrained model. After downloaded the pretrained model, you can put it in `checkpoints/CEBlock/`. 
 Please replace `checkpoint_name=/home/best_ckpt.pt in the scripts/eval.sh` file with the actual path to the weight file.
 
-Then, run a demo to get started as follows:
+Backbone | Base  | CEBlock 
+-- | -- | -- 
+R18 | [weight](https://github.com/Git-hub-Xin/CEBlock/releases/download/v1.0/base_r18_best_ckpt.pt) | [weight](https://github.com/Git-hub-Xin/CEBlock/releases/download/v1.0/ceblock_r18_best_ckpt.pt)
+R34 | [weight](https://github.com/Git-hub-Xin/CEBlock/releases/download/v1.0/base_r34_best_ckpt.pt) | -
+R50 | [weight](https://github.com/Git-hub-Xin/CEBlock/releases/download/v1.0/base_r50_best_ckpt.pt) | -
+R101 | [weight](https://github.com/Git-hub-Xin/CEBlock/releases/download/v1.0/base_r101_best_ckpt.pt) | _
+
+Then, run a test to get started as follows:
 
 ```python
 bash scripts/eval.sh 
@@ -117,4 +123,3 @@ If you use this code for your research, please cite our paper:
 ```
 
 ```
-
